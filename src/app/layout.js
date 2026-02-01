@@ -1,9 +1,10 @@
-import { Manrope } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { ClerkProvider } from "@clerk/nextjs";
 
-const manropeNormal = Manrope({variable: "--thin", subsets: ["latin"], weight: "400"})
-const manropeBold = Manrope({varibale: "--bold", subsets: ["latin"], weight: "600"})
+const montseNormal = Montserrat({variable: "--thin", subsets: ["latin"], weight: "400"})
+const montseBold = Montserrat({variable: "--bold", subsets: ["latin"], weight: "600"})
 
 export const metadata = {
   title: "MindShift",
@@ -12,12 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${manropeNormal.variable} ${manropeBold.variable}`}>
-      <Header />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${montseNormal.variable} ${montseBold.variable}`}>
+          <Header />
+          {children}
+          </body>
+      </html>
+    </ClerkProvider>
   );
 }
 

@@ -3,14 +3,36 @@
 /* variable for a CSS */
 :root {
   --bgColour: rgb(237, 211, 182);
+  --bgLatte: #e8d6c3;  
+  --bgMilk: #ead7c1;  
+  --bgCoffe: #f1e3d3;
+  --bgCoffier: rgb(210, 185, 160);
+  --bgMacc: rgb(196,168,140);
+  --bgCort: rgb(178,150,120);
+  --bdExpr: rgb(84,70,58);
+
+
   --fontColour: #171717;
-  --font: monospace;
+  --font: manrope;
 }
-
-
-
+header{
+  background-color: var(--bgCort);
+}
 body {
-  background-color: var(--bgColour);
+  background-color: var(--bgCoffier);
   color: var(--fontColour);
   font-family: var(--thin);
+}
+
+form  {
+  background-color: var(--bgCort);
+}
+
+.textarea  {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid black;
+  background-color: var(--bgMilk);
+  padding: 10px;
+  font-size: 1rem;
 }
