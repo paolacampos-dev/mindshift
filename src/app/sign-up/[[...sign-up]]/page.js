@@ -6,7 +6,7 @@
 //- Insert user's data into users table, so we cna render it in the profile page
 
 //Extra: create another nested route called createProfile where the user cqan complete their personal info as a second step in the sign-up process
-
+"use client"
 
 import { SignUp } from "@clerk/nextjs";
 
